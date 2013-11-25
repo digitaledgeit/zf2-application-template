@@ -1,0 +1,114 @@
+<?php echo $this->doctype(); ?>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<?php
+		echo $this->headTitle('Digital Edge IT')
+			->append('Template Application')
+			->setSeparator(' &mdash; ')
+			->setAutoEscape(false)
+		;
+	?>
+
+	<!-- meta -->
+	<?php
+		echo $this->headMeta()
+			->appendName('viewport', 'width=device-width, initial-scale=1.0')
+			->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+		;
+	?>
+
+	<!-- styles -->
+	<?php
+		echo $this->headLink(array('rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath().'/img/favicon.ico'))
+			->prependStylesheet($this->basePath().'/css/style.css')
+			->prependStylesheet($this->basePath().'/components/font-awesome/css/font-awesome.min.css')
+			->prependStylesheet($this->basePath().'/components/bootstrap/dist/css/bootstrap-theme.min.css')
+			->prependStylesheet($this->basePath().'/components/bootstrap/dist/css/bootstrap.min.css')
+		;
+	?>
+
+	<!-- scripts -->
+	<?php
+		echo $this->headScript()
+		;
+	?>
+
+</head>
+<body>
+
+<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+
+		<div class="navbar-header">
+
+			<button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+
+			<a class="navbar-brand" href="<?php echo $this->url('home') ?>" title="Digital Edge IT">
+				<img
+					src="<?php echo $this->basePath('img/logo.png') ?>"
+					alt="Template Application"
+				    class="navbar-brand-logo"
+				/>
+			</a>
+
+		</div>
+
+		<div class="collapse navbar-collapse">
+
+			<ul class="nav navbar-nav">
+				<?php
+					echo $this->navigation('Navigation')
+						->menu()
+						->setPartial(array('partial/menu.phtml', 'default'))
+					;
+				?>
+			</ul>
+
+			<ul class="nav navbar-nav navbar-right">
+				<li><p class="navbar-text">Hello <i class="navbar-user">User</i>.</p></li>
+				<li class="dropdown">
+					<a href="#" class="dropdown-toggle" data-toggle="dropdown"><i class="fa fa-cog"></i></a>
+					<ul class="dropdown-menu">
+						<li><a href="#">Settings</a></li>
+						<li class="divider"></li>
+						<li><a href="<?php //echo $this->url('log-out'); ?>">Sign out</a></li>
+					</ul>
+				</li>
+			</ul>
+
+		</div>
+	</div>
+</nav>
+
+<div class="container page__content">
+	<?php echo $this->content; ?>
+</div>
+
+<div class="container page-footer">
+	<hr>
+	<footer>
+		<p class="page-footer__copyright">
+			&copy; 2006 - <?php echo date('Y') ?> by <a href="http://www.digitaledgeit.com.au/">Digital Edge IT</a>.
+			All rights reserved.
+		</p>
+	</footer>
+</div>
+
+	<!-- scripts -->
+	<?php
+		echo $this->inlineScript()
+			->prependFile($this->basePath().'/components/bootstrap/dist/js/bootstrap.min.js')
+			->prependFile($this->basePath().'/components/jquery/jquery.min.js')
+			->prependFile($this->basePath().'/components/respond/respond.min.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+			->prependFile($this->basePath().'/components/html5shiv/dist/html5shiv.js', 'text/javascript', array('conditional' => 'lt IE 9',))
+		;
+	?>
+
+</body>
+</html>

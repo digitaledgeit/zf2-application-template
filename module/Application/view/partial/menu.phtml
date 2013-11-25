@@ -1,0 +1,48 @@
+<ul class="nav navbar-nav">
+<?php foreach ($this->container as $page /** @var Zend\Navigation\Page\Mvc $page */) : ?>
+
+	<?php if (!$page->hasPages()) : ?>
+		<li class="<?php echo $page->isActive() ? 'active' : ''; ?>">
+			<a
+				href="<?php echo $page->getHref(); ?>"
+				target="<?php echo $page->getTarget(); ?>"
+				title="<?php echo $page->getTitle(); ?>"
+				class="dropdown-toggle"
+				data-toggle="dropdown"
+			>
+				<?php if ($page->get('icon') !== ''): ?>
+					<i class="<?php echo $page->get('icon'); ?>"></i>
+				<?php endif; ?>
+				<?php echo $page->getLabel(); ?>
+			</a>
+		</li>
+	<?php else : ?>
+		<li class="dropdown <?php echo $page->isActive() ? 'active' : ''; ?>">
+
+			<a
+				href="<?php echo $page->getHref(); ?>"
+				target="<?php echo $page->getTarget(); ?>"
+				title="<?php echo $page->getTitle(); ?>"
+				class="dropdown-toggle"
+				data-toggle="dropdown"
+			>
+				<?php if ($page->get('icon') !== ''): ?>
+					<i class="<?php echo $page->get('icon'); ?>"></i>
+				<?php endif; ?>
+				<?php echo $page->getLabel(); ?>
+				<b class="caret"></b>
+			</a>
+
+			<ul class="dropdown-menu">
+			<?php foreach ($page->getPages() as $subpage) : ?>
+				<li>
+					<?php echo $this->navigation()->menu()->htmlify($subpage); ?>
+				</li>
+			<?php endforeach; ?>
+			</ul>
+
+		</li>
+	<?php endif; ?>
+
+<?php endforeach; ?>
+</ul>
