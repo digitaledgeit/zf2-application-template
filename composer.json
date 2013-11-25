@@ -1,9 +1,15 @@
 {
-	"name": "",
+	"name": "zf2-application-template",
+	"description":  "Digital Edge IT application template for Zend Framework v2",
+	"homepage":     "http://www.digitaledgeit.com.au/",
 	"authors": [
+		{
+			"name": "James Newell",
+			"email": "james@digitaledgeit.com.au"
+		}
 	],
 	"require": {
 		"php": ">=5.3.3",
-		"zendframework/zendframework": "2.2.*"
+		"zendframework/zendframework": "~2.2"
 	}
 }
