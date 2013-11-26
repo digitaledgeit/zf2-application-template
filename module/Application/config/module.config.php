@@ -25,7 +25,7 @@ return array(
 			'app' => array(
 				'type' => 'Literal',
 				'options' => array(
-					'route' => '/application',
+					'route' => '/app',
 					'defaults' => array(
 						'__NAMESPACE__' => 'Application\Controller',
 						'controller' => 'Index',
