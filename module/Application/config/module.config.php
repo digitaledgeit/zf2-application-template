@@ -2,12 +2,6 @@
 
 return array(
 
-	'service_manager' => array(
-		'factories' => array(
-			'Navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
-		),
-	),
-
 	'router' => array(
 		'routes' => array(
 
@@ -48,6 +42,12 @@ return array(
 				),
 			),
 
+		),
+	),
+
+	'service_manager' => array(
+		'factories' => array(
+			'Navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
 		),
 	),
 
