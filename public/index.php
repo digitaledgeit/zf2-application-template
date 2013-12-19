@@ -9,7 +9,11 @@ if (php_sapi_name() === 'cli-server' && is_file(__DIR__ . parse_url($_SERVER['RE
 }
 
 //include autoloader
-include 'vendor/autoload.php';
+if (is_file('vendor/autoload.php')) {
+	require_once 'vendor/autoload.php';
+} else {
+	exit('Please run `composer install` in your app directory.');
+}
 
 //run the application
 Zend\Mvc\Application::init(require 'config/application.config.php')->run();
