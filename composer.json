@@ -2,6 +2,8 @@
 	"name": "zf2-application-template",
 	"require": {
 		"php": ">=5.4",
-		"zendframework/zendframework": "~2.2"
+		"zendframework/zendframework": "~2.2",
+		"doctrine/doctrine-orm-module": "~0.8",
+		"digitaledgeit/zf2-doctrine-extensions-module": "~0.1"
 	}
 }

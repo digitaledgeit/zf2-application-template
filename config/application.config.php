@@ -3,6 +3,8 @@
 return [
 
 	'modules' => [
+		'DoctrineModule',
+		'DoctrineORMModule',
 		'Application',
 	],
 
