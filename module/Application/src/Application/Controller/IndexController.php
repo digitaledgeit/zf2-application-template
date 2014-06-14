@@ -4,17 +4,17 @@ namespace Application\Controller;
 use Zend\Mvc\Controller\AbstractActionController;
 
 /**
- * Module
+ * Index controller
  * @author James Newell <james@digitaledgeit.com.au>
  */
 class IndexController extends AbstractActionController {
 
 	/**
-	 * Index method
-	 * @return  mixed[string]
+	 * Index action
+	 * @return  mixed[]
 	 */
 	public function indexAction() {
-		return array();
+		return [];
 	}
 
 }

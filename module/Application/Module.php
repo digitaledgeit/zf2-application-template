@@ -1,8 +1,8 @@
 <?php
 
 namespace Application;
-use Zend\Mvc\ModuleRouteListener;
 use Zend\Mvc\MvcEvent;
+use Zend\Mvc\ModuleRouteListener;
 
 /**
  * Module
@@ -22,11 +22,11 @@ class Module {
 	 */
 	public function getAutoloaderConfig() {
 		return array(
-			'Zend\Loader\StandardAutoloader' => array(
-				'namespaces' => array(
+			'Zend\Loader\StandardAutoloader' => [
+				'namespaces' => [
 					__NAMESPACE__ => __DIR__.'/src/'.__NAMESPACE__,
-				),
-			),
+				],
+			],
 		);
 	}
 

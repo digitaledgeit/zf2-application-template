@@ -1,16 +1,10 @@
 {
-	"name": "zf2-application-template",
-	"version": "0.0.1",
-	"description": "Digital Edge IT application template for Zend Framework v2",
-	"homepage": "http://www.digitaledgeit.com.au/",
-	"authors": [
-		"James Newell <james@digitaledgeit.com.au>"
-	],
-	"private": true,
-	"dependencies": {
-		"bootstrap": "~3.0.2",
-		"font-awesome": "~4.0.3",
-		"html5shiv": "~3.7.0",
-		"respond": "~1.3.0"
-	}
+  "name": "zf2-application-template",
+  "private": true,
+  "dependencies": {
+    "modernizr": "~2.8.2",
+    "bootstrap": "~3.0.2",
+    "font-awesome": "~4.0.3",
+    "update": "*"
+  }
 }

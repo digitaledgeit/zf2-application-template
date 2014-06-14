@@ -1,100 +1,99 @@
 <?php
 
-return array(
+return [
 
-	'router' => array(
-		'routes' => array(
+	'router' => [
+		'routes' => [
 
-			'home' => array(
-				'type' => 'Zend\Mvc\Router\Http\Literal',
-				'options' => array(
+			'home' => [
+				'type' => 'Literal',
+				'options' => [
 					'route' => '/',
-					'defaults' => array(
+					'defaults' => [
 						'controller' => 'Application\Controller\Index',
 						'action' => 'index',
-					),
-				),
-			),
+					],
+				],
+			],
 
-			'app' => array(
+			'app' => [
 				'type' => 'Literal',
-				'options' => array(
+				'options' => [
 					'route' => '/app',
-					'defaults' => array(
+					'defaults' => [
 						'__NAMESPACE__' => 'Application\Controller',
 						'controller' => 'Index',
 						'action' => 'index',
-					),
-				),
+					],
+				],
 				'may_terminate' => true,
-				'child_routes' => array(
-					'default' => array(
+				'child_routes' => [
+					'default' => [
 						'type' => 'Segment',
-						'options' => array(
+						'options' => [
 							'route' => '/[:controller[/:action]]',
-							'constraints' => array(
+							'constraints' => [
 								'controller' => '[a-zA-Z][a-zA-Z0-9_-]*',
 								'action' => '[a-zA-Z][a-zA-Z0-9_-]*',
-							),
-							'defaults' => array(),
-						),
-					),
-				),
-			),
+							],
+						],
+					],
+				],
+			],
 
-		),
-	),
+		],
+	],
 
-	'service_manager' => array(
-		'factories' => array(
+	'service_manager' => [
+		'factories' => [
 			'Navigation' => 'Zend\Navigation\Service\DefaultNavigationFactory',
-		),
-	),
+		],
+	],
 
-	'controllers' => array(
-		'invokables' => array(
+	'controllers' => [
+		'invokables' => [
 			'Application\Controller\Index' => 'Application\Controller\IndexController'
-		),
-	),
+		],
+	],
 
-	'translator' => array(
+	'translator' => [
 		'locale' => 'en_US',
-		'translation_file_patterns' => array(
-			array(
+		'translation_file_patterns' => [
+			[
 				'type' => 'gettext',
 				'base_dir' => __DIR__.'/../language',
 				'pattern' => '%s.mo',
-			),
-		),
-	),
+			],
+		],
+	],
 
-	'view_manager' => array(
+	'view_manager' => [
 		'display_not_found_reason' => true,
 		'display_exceptions' => true,
 		'doctype' => 'HTML5',
 		'not_found_template' => 'error/404',
 		'exception_template' => 'error/index',
-		'template_map' => array(
+		'template_map' => [
 			'layout/layout' => __DIR__.'/../view/layout/layout.phtml',
 			'application/index/index' => __DIR__.'/../view/application/index/index.phtml',
 			'error/404' => __DIR__.'/../view/error/404.phtml',
 			'error/index' => __DIR__.'/../view/error/index.phtml',
-		),
-		'template_path_stack' => array(
+		],
+		'template_path_stack' => [
 			__DIR__.'/../view',
-		),
-	),
+		],
+	],
 
-	'navigation' => array(
-		'default' => array(
+	'navigation' => [
+		'default' => [
 
-			'home' => array(
+			'home' => [
 				'label' => 'Home',
 				'route' => 'home',
 				'icon' => 'fa fa-home',
-			),
+			],
 			
-		),
-	),
+		],
+	],
 
-);
+];
