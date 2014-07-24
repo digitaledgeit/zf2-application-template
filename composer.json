@@ -1,7 +1,20 @@
 {
-	"name": "zf2-application-template",
+	"name": "pcosync-application",
+
+	"repositories": [
+		{
+			"type": "composer",
+			"url":  "http://satis.dev/"
+		}
+	],
+
+	"minimum-stability": "dev",
+
 	"require": {
 		"php": ">=5.4",
-		"zendframework/zendframework": "~2.2"
+		"zendframework/zendframework":              "~2.2",
+		"digitaledgeit/zf2-authentication-module":  "dev-master",
+		"digitaledgeit/zf2-authorisation-module":   "dev-master",
+		"pcosync/library":                          "dev-master"
 	}
 }

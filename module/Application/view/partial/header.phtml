@@ -1,0 +1,38 @@
+<?php echo $this->doctype(); ?>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+
+	<?php
+		echo $this->headTitle('PCOSync')
+			->setSeparator(' &mdash; ')
+			->setAutoEscape(false)
+		;
+	?>
+
+	<!-- meta -->
+	<?php
+		echo $this->headMeta()
+			->appendName('viewport', 'width=device-width, initial-scale=1.0')
+			->appendHttpEquiv('X-UA-Compatible', 'IE=edge')
+		;
+	?>
+
+	<!-- styles -->
+	<?php
+		echo $this->headLink(['rel' => 'shortcut icon', 'type' => 'image/vnd.microsoft.icon', 'href' => $this->basePath().'/favicon.ico'])
+			->appendStylesheet($this->basePath().'/app/build/build.css')
+		;
+	?>
+
+	<!-- fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Lato:300,400,700' rel='stylesheet' type='text/css'>
+
+	<!-- scripts -->
+	<?php
+		echo $this->headScript()
+		;
+	?>
+
+</head>
+<body class="<?php echo isset($body_class) ? $body_class : ''; ?>">

@@ -1,0 +1,115 @@
+html, body {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+	font-size: 16px;
+	font-family: "Lato", sans-serif;
+}
+
+/* === Block: Body === */
+
+.body {
+	width: 100%;
+	min-height: 100%;
+	margin: 0;
+	padding: 0;
+}
+
+.body--minimal {
+	background-color: #dedede;
+}
+
+@media (max-width: 40em) {
+	.body--minimal {
+		background-color: #efefef;
+	}
+}
+
+/* === Block: Panel === */
+
+.panel {
+	margin-top: 10%;
+	padding: 20px;
+	border-radius: 1px;
+	border: 1px solid #ccc;
+	background-color: #fff;
+}
+
+.panel__logo {
+	width: 250px;
+	height: 74px;
+	margin: auto;
+	margin-bottom: 50px;
+	background-size: contain;
+	background-image: url('img/logo-horizontal.png');
+}
+
+.panel__content {
+	text-align: center;
+}
+
+@media (max-width: 40em) {
+	.panel {
+		border: none;
+		background-color: #efefef;
+	}
+}
+
+/* === Block: Button === */
+
+.btn {
+	display: inline-block;
+	padding: 5px 10px;
+	border: 1px solid transparent;
+	border-radius: 2px;
+}
+
+.btn--medium {
+	padding: 5px 10px;
+}
+
+.btn--large {
+	padding: 10px 15px;
+}
+
+.btn--connect {
+	color: #fff;
+	font-weight: 300;
+	text-decoration: none;
+	border-color: #094575;
+	background-color: #3c76a6;
+}
+
+.btn--connect:hover {
+	background-color: rgba(60, 118, 166, 0.9);
+}
+
+.btn--connect:hover:active {
+	background-color: rgba(9, 69, 117, 0.91);
+}
+
+/* === Block: Help message === */
+
+.message {
+	font-weight: 300;
+}
+
+.message--help {
+	color: #444;
+}
+
+.message--error {
+	color: red;
+	font-size: 18px;
+	font-weight: normal;
+}
+
+/* ??? */
+
+.nav--vertical {
+	border: 1px dotted #ccc;
+}
+
+.nav .nav__item {
+	padding: 5px 10px;
+}

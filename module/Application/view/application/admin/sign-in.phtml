@@ -1,0 +1,43 @@
+<?php
+	$this->layout()->setTemplate('layout/minimal');
+	$this->headTitle('Connect with Planning Center Online');
+?>
+
+<div class="rg-Page">
+	<div class="rg-Grid rg-textCenterAt4">
+		<div class="rg-Unit rg-4of4 rg-4of6 rg-5of10">
+
+			<div class="panel">
+
+				<header class="panel__header">
+					<div class="panel__logo"></div>
+				</header>
+
+				<section class="panel__content">
+
+					<p class="message message--help">
+						Sign up or sign in with your Planning Center Online account.
+					</p>
+
+					<?php if (!empty($messages)) : ?>
+					<p class="message message--error">
+						<?php echo current($messages); ?>
+					</p>
+					<?php endif; ?>
+
+					<a class="btn btn--large btn--connect" href="<?php echo $this->planningCenterOnline()->getAuthorisationUrl(); ?>">
+						Connect with <b>Planning Center Online</b>
+					</a>
+
+				</section>
+
+				<footer class="panel__footer">
+
+				</footer>
+
+			</div>
+
+
+		</div>
+	</div>
+</div>

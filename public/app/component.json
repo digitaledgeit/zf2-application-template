@@ -1,0 +1,9 @@
+{
+	"name": "pcosync-application",
+	"scripts": ["index.js"],
+	"styles": ["index.css"],
+	"images": ["img/logo-horizontal.png"],
+	"dependencies": {
+		"nib-styles/responsive-grid": "*"
+	}
+}

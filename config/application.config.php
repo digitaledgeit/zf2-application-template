@@ -3,6 +3,11 @@
 return [
 
 	'modules' => [
+		'DoctrineModule',
+		'DoctrineMongoODMModule',
+		'DeitAuthenticationModule',
+		'DeitAuthorisationModule',
+		'PCOSync',
 		'Application',
 	],
 

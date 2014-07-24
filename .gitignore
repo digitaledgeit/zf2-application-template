@@ -6,3 +6,7 @@ nbproject
 .idea
 .project
 .settings
+
+data/DoctrineMongoODMModule
+public/app/build
+public/app/components
