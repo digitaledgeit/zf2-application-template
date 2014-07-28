@@ -16,6 +16,20 @@ return [
 				],
 			],
 
+			'log-in' => [
+				'type' => 'Literal',
+				'options' => [
+					'route' => '/sign-in',
+				],
+			],
+
+			'log-out' => [
+				'type' => 'Literal',
+				'options' => [
+					'route' => '/sign-out',
+				],
+			],
+
 			'app' => [
 				'type' => 'Literal',
 				'options' => [
@@ -167,7 +181,7 @@ return [
 		 * The service name of the unauthorised strategy
 		 * @type    string
 		 */
-		'strategy'  => 'DeitAuthorisationModule\View\ViewStrategy',
+		'strategy'  => 'DeitAuthorisationModule\View\RedirectStrategy',
 
 		/**
 		 * The view template to display when the user is unauthorised
@@ -199,7 +213,7 @@ return [
 				'allow'     => array(
 					'DeitAuthenticationModule\\Controller\\Authentication\\log-in'  => 'guest',
 					'DeitAuthenticationModule\\Controller\\Authentication\\log-out' => 'admin',
-					'Application' => 'guest'
+					'Application' => 'admin'
 				),
 			),
 		),
